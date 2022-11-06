@@ -1,0 +1,28 @@
+html 
+  head 
+    title Search Page
+body 
+  include ../partials/header
+
+  div#main
+  header    
+      h1 Search #{optionName} Query Function:
+      | Enter Search Query: 
+      br
+      input#searchQuery(type='text' placeholder='Enter Search Query')
+      br
+      br
+      input#pageRankBoost(type='checkbox' name='pageRankBoost')
+      label(for='pageRankBoost')  Boost search results with PageRank score 
+      br
+      br
+      | Enter Search Result Limit (Min 1, Max 50): 
+      br
+      input#searchLimit(type='text' placeholder='Enter Limit for Results' value='10')
+      br
+      br
+      a(onclick='findhref()')
+        button#submit(type='button') Search
+      script.
+        var optionStr = !{jsStringify(optionName)};
+      script(src='/client.js')

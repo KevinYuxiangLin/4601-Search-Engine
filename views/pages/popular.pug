@@ -1,0 +1,15 @@
+html 
+  head 
+    title Popular Sites Page 
+body 
+  include ../partials/header
+
+  div#main
+  header    
+    h1 List of Top 10 Most Linked Sites:
+    each site in sites
+      - var siteLink = site.url
+      a(href= siteLink) #{siteLink}
+      | 
+      a(href="/site/" + site.name) (#{site.numberofIncomingLinks})
+      br

@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head></head>
+<body>
+    <div id="search">
+            Enter Search Query: <br>    
+            <input type="text" placeholder="Enter Search Query" id="searchQuery"/><br><br> 
+            <input type="checkbox" id="pageRankBoost" name="pageRankBoost">
+            <label for="pageRankBoost"> Boost search results with PageRank score </label><br><br>
+            Enter Search Result Limit (Min 1, Max 50): <br>  
+            <input type="text" placeholder="Enter Limit for Results" id="searchLimit" value = 10 /><br><br> 
+            <a onclick="findhref()">
+                 <button type="button" id="submit">Search</button>
+            </a>
+    </div>
+    <script src="/client.js">
+    </script>
+</body>
+</html>

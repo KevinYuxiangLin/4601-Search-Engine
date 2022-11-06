@@ -1,0 +1,31 @@
+html
+    head 
+            title #{site.name}
+    body 
+        include ../partials/header 
+        div#main
+                 h1 #{site.title} Info
+                 p Site Link:
+                  br
+                  a(href= site.name) #{site.name}
+                 p Site Title: <br/> #{site.title}
+                 p Site Body: <br/> #{site.paragraph}
+                 p Number of Outgoing Links: <br/> #{site.outgoinglinks} <br/>
+                 | List of outgoing links from site #{site.title}
+                 br
+                 each linkedSite in site.children
+                    - var siteLink = linkedSite.name
+                    a(href= siteLink) #{siteLink}
+                    br
+                 p Number of Incoming Links: <br/> #{incomingSite.numberofIncomingLinks} <br/>
+                 | List of incoming links to site #{site.title}
+                 br
+                 each linkedSite in incomingSite.parents
+                     a(href= linkedSite) #{linkedSite}
+                     br
+                 br
+                 | Word Frequency Information for this page: 
+                 br
+                 each entry in wordFreq.index
+                    p #{entry.word} occured #{entry.frequency} times.
+                 br

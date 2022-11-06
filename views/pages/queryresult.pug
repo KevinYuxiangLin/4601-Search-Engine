@@ -1,0 +1,29 @@
+html 
+  head 
+    title Query Result Page 
+body 
+  include ../partials/header
+
+  div#main
+  header    
+    h1 Top #{limit} Search Results:
+    each site in sites
+      | #[strong Site Link:]
+      - var siteLink = site.name
+      <br/>
+      a(href= siteLink) #{siteLink}
+      br
+      | #[strong Site Name:]
+      <br/> #{site.title}
+      br
+      | #[strong Site PageRank:]
+      <br/> #{site.rank}
+      br
+      | #[strong Site Data:]
+      <br/> 
+      a(href= dataSite + site.pageId) View more info
+      br
+      | #[strong Site ID:]
+      <br/> #{site.pageId}
+      br
+      br

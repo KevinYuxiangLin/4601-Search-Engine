@@ -1,0 +1,25 @@
+{
+    "name": "4601l4",
+    "version": "1.0.0",
+    "description": "lab4",
+    "main": "app.js",
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1"
+    },
+    "author": "",
+    "license": "ISC",
+    "dependencies": {
+        "body-parser": "^1.20.0",
+        "cheerio": "^1.0.0-rc.12",
+        "connect-mongodb-session": "^2.3.1",
+        "crawler": "^1.3.0",
+        "elasticlunr": "^0.9.5",
+        "express": "^4.17.1",
+        "express-session": "^1.17.0",
+        "ml-matrix": "^6.10.4",
+        "mongodb": "^3.5.5",
+        "mongoose": "^5.13.15",
+        "mongoose-random": "^0.1.1",
+        "pug": "^2.0.4"
+    }
+}
